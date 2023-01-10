@@ -89,7 +89,7 @@ Two data files will need to be downloaded from GTEx in order to perform the anal
 
  These files should be downloaded on your own and then manually placed in the '01.raw_data/V8/' directory.
 
-## 2.2 user-defined list of target genes
+## 2.2 User-defined list of target genes
 You will need to manually edit the '02.data/target_genes.txt' file to contain a list of your target genes; one gene per line.
 
 
