@@ -68,7 +68,8 @@ fdr = 0.05
 # set - GTEx data headers dict
 tissue_header_d = {"toptissue":"SMTS", "subtissue":"SMTSD"}
 
-
+# set - spearman correlation threshold
+spearman_correlation_cutoff = 0.25
 ################################################################################
 # Execution ####################################################################
 ################################################################################
@@ -148,7 +149,7 @@ for target_gene_symbol in target_genes_ls:
                                     print(count)
 
                             # initiate - df of correlation results for target tissue
-                            tissue_results_df = pd.DataFrame(tissue_results_ls, columns = ["target_tissue", "tissue_n", "target_gene_symbol", "target_gene_id", "correlated_gene_symbol", "correlated_gene_id", "correlation", "pval", "target_gene_expr", "correlated_gene_expr"])
+                            tissue_results_df = pd.DataFrame(tissue_results_ls, columns = ["target_tissue", "tissue_n", "target_gene_symbol", "target_gene_id", "correlated_gene_symbol", "correlated_gene_id", "correlation", "pval", "target_gene_expr_avg", "correlated_gene_expr_avg"])
 
                             # filter - entries where correlation/pval were not determined
                             tissue_results_df = tissue_results_df[tissue_results_df['pval'].notnull()]
